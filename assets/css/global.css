@@ -1,3 +1,39 @@
-h1{
-    color: red;
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
+
+body{
+    background-color: gray;
+}
+
+.content{
+    width: 100vw;
+    height: max-content;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pagination button {
+    background-color: transparent;
+    border-radius: 1rem;
+    width: 100%;
+}
+
