@@ -14,15 +14,6 @@ body{
     background-color: #fff;
 }
 
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
-}
-
 .pagination {
     display: flex;
     flex-direction: row;
@@ -35,5 +26,14 @@ body{
     background-color: transparent;
     border-radius: 1rem;
     width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
 }
 

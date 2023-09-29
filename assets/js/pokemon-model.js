@@ -4,7 +4,7 @@ class Pokemon {
     types = [];
     type;
     img;
-
+    
     static ofPokeApiDetail = (pokeApiDetail) => {
         let pokemon = new Pokemon();
         pokemon.id = pokeApiDetail.id;
