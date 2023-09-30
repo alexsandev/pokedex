@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: gray;
+    background-color: rgb(226, 224, 224);
 }
 
 .content{
@@ -12,6 +12,14 @@ body{
     height: max-content;
     padding: 1rem;
     background-color: #fff;
+}
+
+.listing {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .pagination {
@@ -36,4 +44,22 @@ body{
         border-radius: 1rem;
     }
 }
+
+@media screen and (min-width: 393px) {
+    .listing {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .listing {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/*
+@media screen and (min-width: 992px) {
+    .listing {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}*/
 

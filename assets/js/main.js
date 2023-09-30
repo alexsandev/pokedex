@@ -1,6 +1,8 @@
 var offset = 0;
-var limit = 4;
+var limit = 3;
 var max = 151;
+
+loadPokemons(offset, limit);
 
 function loadPokemons(offset, limit){
     pokeApi.getPokemonList(offset, limit).then(pokemons => {
@@ -9,8 +11,6 @@ function loadPokemons(offset, limit){
         });
     });
 }
-
-loadPokemons(offset, limit);
 
 function openPokemonDetails(id){
     let pokemon = {}

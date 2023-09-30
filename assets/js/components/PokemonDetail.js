@@ -4,6 +4,7 @@ class PokemonDetail extends HTMLElement {
         const shadow = this.attachShadow({mode: "open"});
         shadow.appendChild(this.styles());
         shadow.appendChild(this.build(pokemon));
+        shadow.getElementById("heart_button").addEventListener('click', () => this.heartPress(shadow));
     }
 
     build(pokemon){
@@ -12,8 +13,8 @@ class PokemonDetail extends HTMLElement {
         teste.innerHTML = `
         <section class="content detail_content ${pokemon.type}">
             <div style="display: flex; justify-content: space-between;">
-                <button class="detail_button" type="button" onclick="closePokemonDetails()"><img src="../assets/icons/voltar.png" alt="voltar"></button>
-                <button class="detail_button" type="button" onclick="closePokemonDetails()"><img src="../assets/icons/coracao.png" alt="favoritar"></button>
+                <button id="back_button" class="detail_button" type="button" onclick="closePokemonDetails()"><img src="../assets/icons/voltar.png" alt="voltar"></button>
+                <button id="heart_button" class="detail_button" type="button"><img src="../assets/icons/coracao.png" alt="favoritar"></button>
             </div>
             <div class="resume_box">
                 <div style="display: flex; justify-content: space-between;">
@@ -289,6 +290,12 @@ class PokemonDetail extends HTMLElement {
         `
         return style;
     }
+
+    heartPress(shadow){
+        let img = shadow.getElementById("heart_button").firstChild;
+        var vect = img.src.split('/');
+        img.src = ( vect[vect.length - 1] == "coracao.png") ? "assets/icons/black_heart.png" : "assets/icons/coracao.png";
+    }   
 }
 
 customElements.define("poke-detail", PokemonDetail);
